@@ -1,3 +1,6 @@
+import java.util.*;
+
+
 public class WordChecker {
   private ArrayList<String> wordList;
 
