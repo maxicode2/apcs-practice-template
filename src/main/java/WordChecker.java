@@ -4,7 +4,7 @@ import java.util.*;
 public class WordChecker {
   private ArrayList<String> wordList;
 
-  public WordChecker(ArrayList<String> wordlist) {
+  public WordChecker(ArrayList<String> wordList) {
     this.wordList = wordList;
   }
 
