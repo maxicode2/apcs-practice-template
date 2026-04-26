@@ -10,8 +10,8 @@ on:
         type: choice
         options:
           - all
-          - GuessingGameTest
-          - ScoreboardTest
+          - GuessingGameTest.java
+          - ScoreboardTest.java
 
 jobs:
   run_tests:
