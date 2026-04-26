@@ -31,4 +31,5 @@ public class ScoreboardTest {
         Scoreboard scoreboard = new Scoreboard("A", "B");
 
         assertEquals("Check Scoreboard recordPlay() and getScore()", scoreboard.getScore(), "0-0 A");
+    }
 }
