@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Scoreboard {
     boolean team1Active = true;
     int team1Score = 0;
