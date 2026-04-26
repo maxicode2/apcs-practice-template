@@ -18,7 +18,7 @@ public class Scoreboard {
     }
 
     public String getScore() {
-        return team1Score + "-" + team2Score + "-" + team1Active ? team1 : team2;
+        return team1Score + "-" + team2Score + "-" + (team1Active ? team1 : team2);
     }
 
 }
