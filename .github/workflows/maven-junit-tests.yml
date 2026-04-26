@@ -12,6 +12,7 @@ on:
           - all
           - GuessingGameTest.java
           - ScoreboardTest.java
+          - WordCheckerTest.java
 
 jobs:
   run_tests:
