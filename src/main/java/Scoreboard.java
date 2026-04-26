@@ -13,8 +13,8 @@ public class Scoreboard {
 
     public void recordPlay(int score) {
         if(score == 0) team1Active = !team1Active;
-        else if(team1Active) team1 += score;
-        else team2 += score;
+        else if(team1Active) team1Score += score;
+        else team2Score += score;
     }
 
     public String getScore() {
