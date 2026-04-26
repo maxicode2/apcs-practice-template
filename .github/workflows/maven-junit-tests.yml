@@ -1,9 +1,17 @@
 name: Run Unit Tests
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
+    inputs:
+      test_file:
+        description: 'Select which test file to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - GuessingGameTest
+          - ScoreboardTest
 
 jobs:
   run_tests:
@@ -21,7 +29,12 @@ jobs:
           cache: maven
 
       - name: Run tests with Maven
-        run: mvn -B package --file pom.xml
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.test_file }}" != "all" ]; then
+            mvn -B package -Dtest=${{ inputs.test_file }} --file pom.xml
+          else
+            mvn -B package --file pom.xml
+          fi
 
       - name: Report
         uses: dorny/test-reporter@v1
