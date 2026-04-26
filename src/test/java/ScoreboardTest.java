@@ -23,7 +23,7 @@ public class ScoreboardTest {
 
         String notExpected = "1-3 Team A";
         String message = "Check Scoreboard recordPlay() and getScore()";
-        assertTrue(message, !scoreboard.getScore().equals(expected));
+        assertTrue(message, !scoreboard.getScore().equals(notExpected));
     }
 
     @Test(timeout = 1000)
